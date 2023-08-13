@@ -132,7 +132,7 @@ function Tournament() {
                 admin ?
                 <div className="flex gap-5 flex-col  md:flex-row md:gap-9 w-3/4 items-center justify-center">
           <button onClick={HandleEditTournament}  className="text-xl bg-violet-600 px-4 py-2 rounded-lg font-semibold textColor italic w-full md:py-1" >
-           Edit  Details
+           Edit  Tournament
           </button>
           <button onClick={HandleDeleteTournament} className="text-xl bg-red-600 px-4 py-2 rounded-lg font-semibold textColor italic w-full md:py-1" >
            Delete Tournament
