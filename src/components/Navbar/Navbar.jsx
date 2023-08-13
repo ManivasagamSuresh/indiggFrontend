@@ -50,9 +50,9 @@ function Navbar() {
               :
               <button className='italic text-white font-bold my-4' onClick={()=>{handleAMyTournament();}}> MY TOURNAMENT</button>
             }
-            <div className='flex items-center justify-center gap-2 text-white font-bold' onClick={()=>{handleLogout()}}>
+            <div className='flex items-center justify-center gap-2 text-white font-bold ' onClick={()=>{handleLogout()}}>
             <AiOutlineLogout/>
-            <span >LOGOUT</span>
+            <span>LOGOUT</span>
             </div>
 
 
@@ -66,9 +66,9 @@ function Navbar() {
               :
               <button onClick={()=>{handleAMyTournament();}} className='hovering italic'> MY TOURNAMENT</button>
             }
-            <div className='flex items-center gap-2 cursor-pointer hovering' onClick={()=>{handleLogout()}}>
+            <div className='flex items-center gap-2 cursor-pointer hovering md:mx-4' onClick={()=>{handleLogout()}}>
             <AiOutlineLogout/>
-            <span className='italic'>Logout</span>
+            <span className='italic '>Logout</span>
             </div>
             </div>
     </>

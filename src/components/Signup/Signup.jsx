@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 function Signup() {
   const [ log,setLog] =useState(false);
   const navigate = useNavigate();
+  const [error,setError]=useState("");
   const formik = useFormik({
     initialValues:{
       "name":"",
@@ -46,7 +47,10 @@ function Signup() {
         formik.resetForm();
         navigate("/");
       } catch (error) {
-        console.log(error)
+        console.log(error);
+        console.log(error.response);
+        setError(error.response.data);
+        setLog(false);
       }
     }
   })
@@ -63,6 +67,7 @@ const handleSignin = ()=>{
                 <input type="password" placeholder="Confirm Password" onChange={formik.handleChange} value={formik.values.confirmpassword} name="confirmpassword" className=" border-b border-zinc-900  bg-transparent  outline-none rounded-sm h-8 md:w-96"/>
                 <button type="submit" className="bg-violet-900 px-6 py-1 text-xl font-semibold textColor flex items-center rounded-md">{log ? <><span>Signing Up</span><img src={loader} alt="" className="w-12"  /> </>:<span className="px-8 py-1">Sign Up</span>  }</button>
             </form>
+            <div className="text-red-600 font-semibold my-2 text-center">{error}</div>
             <div className="textColor my-2" >Already have a account. <span onClick={()=>{handleSignin()}} className="cursor-pointer underline"> Sign In</span></div>
         </div>;
 }
