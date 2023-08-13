@@ -6,6 +6,9 @@ import Tournament from './components/Tournament/Tournament';
 
 import Signup from './components/Signup/Signup';
 import Login from './components/Login/Login';
+import Editparticipant from './components/Editdetails/EditDetails';
+import AddTournament from './components/AddTournament/AddTournament';
+import EditTournament from './components/EditTournament/EditTournament';
 
 function App() {
   return (
@@ -13,10 +16,14 @@ function App() {
       <BrowserRouter>
       
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/login' element={<Login/>}/>
+        <Route path='/home' element={<Home/>}/>
+        <Route path='/' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/tournament/:id' element={<Tournament/>}/>
+        <Route path='/mytournament/:id' element={<Tournament/>}/>
+        <Route path='/editParticipant/:id' element={<Editparticipant/>}/>
+        <Route path='/AddTournament' element={<AddTournament/>}/>
+        <Route path='/editTournament/:id' element={<EditTournament/>}/>
       </Routes>
       
       </BrowserRouter>

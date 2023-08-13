@@ -38,11 +38,13 @@ function Signup() {
     },
     onSubmit:async(values)=>{
       try {
+        setLog(true);
         console.log(values)
         const user = await axios.post(`${Config.api}/user/signup`,values);
         console.log(user.data);
+        setLog(false);
         formik.resetForm();
-        navigate("/login");
+        navigate("/");
       } catch (error) {
         console.log(error)
       }
@@ -50,7 +52,7 @@ function Signup() {
   })
 
 const handleSignin = ()=>{
-  navigate("/login")
+  navigate("/")
 }
   return <div className="flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-b from-sky-400 to-violet-600 ">
     <div className="text-2xl font-semibold italic mb-6 md:text-3xl">Sign Up</div>
