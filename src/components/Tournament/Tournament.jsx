@@ -35,7 +35,7 @@ function Tournament() {
           }
           // console.log(currentTour)
           setEvent(currentTour);
-  },[currentUser.tournaments,currentTour.participants])
+  },[currentUser.tournaments,currentTour?.participants])
 
 
 
