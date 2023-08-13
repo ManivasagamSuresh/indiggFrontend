@@ -107,12 +107,12 @@ function Tournament() {
       
     <div className="flex flex-col gap-4 h-fit items-center italic  bgcard">
          <div className="w-full flex flex-col items-center ">
-        <img src={event?.coverImg} alt="" className="h-48 w-full  object-center md:h-96   md:w-10/12 md:my-8 "/>
-        <div className="relative bottom-8  h-fit w-72 md:w-fit text-lg font-semibold italic skew-x-12 px-2 text-center left-auto right-auto bgcard boxshadowgray md:bottom-12 md:h-14 md:px-9 md:text-3xl">
+        <img src={event?.coverImg} alt="" className="h-48 w-full  object-center md:h-96   md:w-10/12 md:my-4 "/>
+        <div className="relative bottom-4  h-fit w-72 md:w-fit text-lg font-semibold italic skew-x-12 px-2 text-center left-auto right-auto bgcard boxshadowgray md:bottom-12 md:h-14 md:px-9 md:text-3xl">
             {event?.name}
         </div>
       </div>
-      <div className="my-8 flex flex-col text-xl items-center bgcard gap-4 p-3 w-11/12 ">
+      <div className="my-0 flex flex-col text-xl items-center bgcard gap-4 p-3 w-11/12 ">
         <div className="flex flex-col md:flex-row md:gap-9"> 
         <span ><span className="font-semibold">Start Date: </span>{event?.startDate}
         </span>
