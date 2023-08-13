@@ -40,3 +40,8 @@
   0% { transform: scale(1); }
   100% { transform: scale(1.2); }
 }
+
+.homenav{
+  top: 1rem;
+  right:1.8rem;
+}

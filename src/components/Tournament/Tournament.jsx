@@ -9,6 +9,7 @@ import { Config } from "../../config";
 import { current } from "@reduxjs/toolkit";
 import { addTournament, removeTournament } from "../../redux/userSlice";
 import { BiSolidHomeAlt2 } from 'react-icons/bi';
+import Navbar from "../Navbar/Navbar";
 
 function Tournament() {
     const [open,setOpen] = useState(false);
@@ -102,13 +103,12 @@ function Tournament() {
 
   return (
     <div className="bg-gradient-to-b from-sky-400 to-violet-600 p-2 ">
+      <Navbar home={true}/>
       
     <div className="flex flex-col gap-4 h-fit items-center italic  bgcard">
-    {/* <div className='absolute textColor top-3 right-5 p-3 md:p-5 cursor-pointer flex items-center gap-2 md:text-black md:top-0 md:right-0' onClick={()=>{handleNavigateHome();}}><BiSolidHomeAlt2 size={"25px"}/><span className="hidden md:block">HOME</span></div> */}
-
-      <div className="w-full flex flex-col items-center ">
-        <img src={event?.coverImg} alt="" className="h-48 w-full  object-center md:h-96 md:w-10/12 md:my-8"/>
-        <div className="absolute top-44  h-fit w-72 md:w-fit text-lg font-semibold italic skew-x-12 px-2 text-center left-auto right-auto bgcard boxshadowgray md:top-96 md:h-14 md:px-9 md:text-3xl">
+         <div className="w-full flex flex-col items-center ">
+        <img src={event?.coverImg} alt="" className="h-48 w-full  object-center md:h-96   md:w-10/12 md:my-8 "/>
+        <div className="relative bottom-8  h-fit w-72 md:w-fit text-lg font-semibold italic skew-x-12 px-2 text-center left-auto right-auto bgcard boxshadowgray md:bottom-12 md:h-14 md:px-9 md:text-3xl">
             {event?.name}
         </div>
       </div>
