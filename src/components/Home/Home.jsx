@@ -27,8 +27,8 @@ function Home() {
            <Navbar/>
             <div className='flex flex-col items-center my-8'>
             <img src={logo} alt="" className='rotating-logo'/>
-            <h1 className='text-2xl md:text-3xl italic font-extrabold text-center bg-gradient-to-r from-grad-start via-grad-mid to-grad-end text-transparent bg-clip-text text-custom-shadow'>Its Time to turn on your Game Mode</h1>
-            <h1 className='text-2xl md:text-3xl italic font-extrabold text-center bg-gradient-to-r from-grad-start via-grad-mid to-grad-end text-transparent bg-clip-text text-custom-shadow'>Join your favorite Tournament here</h1>
+            <h1 className='text-2xl md:text-3xl font-times font-extrabold text-center bg-gradient-to-r from-grad-start via-grad-mid to-grad-end text-transparent bg-clip-text text-custom-shadow scalingtext italic'>STRATEGIZE,  PLAY,  CONQUER</h1>
+            <h1 className='text-2xl md:text-3xl font-times font-extrabold text-center bg-gradient-to-r from-grad-start via-grad-mid to-grad-end text-transparent bg-clip-text text-custom-shadow italic'>Join your favorite Tournament here</h1>
             </div>   
         </div>
 

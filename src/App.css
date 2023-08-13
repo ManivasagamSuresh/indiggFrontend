@@ -13,12 +13,30 @@
 .boxshadowgray{
   box-shadow: 2px 2px 1px gray;
 }
+.hovering:hover{
+  transform:  scale(1.1);
+  color: #FFFFFF;
+}
+.font-times {
+  font-family:'Times New Roman', Times, serif
+}
 
 .rotating-logo {
-  animation: rotateAnimation 1s linear 3; /* 3 iterations, 3*2=6 seconds total animation time */
+  animation: rotateAnimation 2s linear 1; 
 }
 
 @keyframes rotateAnimation {
   0% { transform: rotateY(0deg); }
   100% { transform: rotateY(180deg); }
+}
+
+
+.scalingtext {
+  animation: scaleAnimation 2s linear 1; 
+  transition: 1s;
+}
+
+@keyframes scaleAnimation {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.2); }
 }

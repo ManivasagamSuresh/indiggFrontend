@@ -23,6 +23,11 @@ function Navbar() {
     navigate("/AddTournament")
   }
 
+  const handleAMyTournament = ()=>{
+    console.log("first")
+    navigate("/mytournament")
+  }
+
   const handleLogout = ()=>{
         dispatch(logout());
         navigate("/")
@@ -30,6 +35,7 @@ function Navbar() {
 
   return (
     <>
+    <div className='md:hidden'>
     {!open ? <div className='absolute right-3 top-3'>
         <GiHamburgerMenu onClick={()=>{setOpen(true)}}  size={"25px"} className='text-white'/>
         
@@ -42,7 +48,7 @@ function Navbar() {
               
               <button className='italic text-white font-bold my-4' onClick={()=>{handleAddTournament();}}>ADD TOURNAMENT</button>
               :
-              <button className='italic text-white font-bold my-4'> MY TOURNAMENT</button>
+              <button className='italic text-white font-bold my-4' onClick={()=>{handleAMyTournament();}}> MY TOURNAMENT</button>
             }
             <div className='flex items-center justify-center gap-2 text-white font-bold' onClick={()=>{handleLogout()}}>
             <AiOutlineLogout/>
@@ -51,17 +57,18 @@ function Navbar() {
 
 
         </div>}
+        </div>
      <div className='textColor hidden items-center gap-8 justify-end m-3 font-semibold text-xl md:flex'>
             {
               admin ?
               
-              <button>ADD TOURNAMENT</button>
+              <button onClick={()=>{handleAddTournament();}} className='hovering italic'>  ADD TOURNAMENT</button>
               :
-              <button> MY TOURNAMENT</button>
+              <button onClick={()=>{handleAMyTournament();}} className='hovering italic'> MY TOURNAMENT</button>
             }
-            <div>
+            <div className='flex items-center gap-2 cursor-pointer hovering' onClick={()=>{handleLogout()}}>
             <AiOutlineLogout/>
-            <span>Logout</span>
+            <span className='italic'>Logout</span>
             </div>
             </div>
     </>
