@@ -107,25 +107,25 @@ function Tournament() {
     {/* <div className='absolute textColor top-3 right-5 p-3 md:p-5 cursor-pointer flex items-center gap-2 md:text-black md:top-0 md:right-0' onClick={()=>{handleNavigateHome();}}><BiSolidHomeAlt2 size={"25px"}/><span className="hidden md:block">HOME</span></div> */}
 
       <div className="w-full flex flex-col items-center ">
-        <img src={event.coverImg} alt="" className="h-48 w-full  object-center md:h-96 md:w-10/12 md:my-8"/>
+        <img src={event?.coverImg} alt="" className="h-48 w-full  object-center md:h-96 md:w-10/12 md:my-8"/>
         <div className="absolute top-44  h-fit w-72 md:w-fit text-lg font-semibold italic skew-x-12 px-2 text-center left-auto right-auto bgcard boxshadowgray md:top-96 md:h-14 md:px-9 md:text-3xl">
-            {event.name}
+            {event?.name}
         </div>
       </div>
       <div className="my-8 flex flex-col text-xl items-center bgcard gap-4 p-3 w-11/12 ">
         <div className="flex flex-col md:flex-row md:gap-9"> 
-        <span ><span className="font-semibold">Start Date: </span>{event.startDate}
+        <span ><span className="font-semibold">Start Date: </span>{event?.startDate}
         </span>
-        <span ><span className="font-semibold">End Date:</span> {event.endDate}</span>
+        <span ><span className="font-semibold">End Date:</span> {event?.endDate}</span>
         </div>
       
         <div className="flex gap-3 md:flex-row md:gap-9">
 
-        <div ><span className="font-semibold" >Total slots: </span>{event.TotalParticipants}</div>
+        <div ><span className="font-semibold" >Total slots: </span>{event?.TotalParticipants}</div>
         <div ><span className="font-semibold">Slots Filled: </span> { event?.participants?.length}</div>
         </div>
-        <div ><span className="font-semibold">Status: </span>{event.status}</div>
-        <div className="text-violet-600 font-bold text-3xl text-center">Winner Grabs <span>{event.prize}</span></div>
+        <div ><span className="font-semibold">Status: </span>{event?.status}</div>
+        <div className="text-violet-600 font-bold text-3xl text-center">Winner Grabs <span>{event?.prize}</span></div>
       </div>
       <div className="flex flex-col items-center">
             {
@@ -174,7 +174,7 @@ function Tournament() {
                 </tr>
             </thead>
                 <tbody>
-            {event.participants.map((participant, index)=>{
+            {event?.participants.map((participant, index)=>{
                 return  <tr  className="" key={participant._id}>
                 <td className="">{index+1}</td>
                 <td className="">{participant.name}</td>
