@@ -56,8 +56,8 @@ function Login() {
     
             <form action="" className="flex flex-col items-center justify-center gap-6 md:gap-8" onSubmit={formik.handleSubmit}>
                 
-                <input type="email" placeholder="Email" onChange={formik.handleChange} value={formik.values.email} name="email" className=" border-b border-zinc-900  bg-transparent  outline-none rounded-sm h-8 md:w-96"/>
-                <input type="password" placeholder="Password" onChange={formik.handleChange} value={formik.values.password} name="password" className=" border-b border-zinc-900  bg-transparent  outline-none rounded-sm h-8 md:w-96"/>
+                <input type="email" placeholder="Email" onChange={formik.handleChange} value={formik.values.email} name="email" className=" border-b border-zinc-900  bg-transparent  outline-none rounded-sm h-8 md:w-96 text-white placeholder-white"/>
+                <input type="password" placeholder="Password" onChange={formik.handleChange} value={formik.values.password} name="password" className=" border-b border-zinc-900  bg-transparent  outline-none rounded-sm h-8 md:w-96 text-white placeholder-white"/>
                 <button type="submit" className="bg-violet-900 px-6 py-1 text-xl font-semibold textColor flex items-center rounded-md">{log ? <><span>Logging In</span><img src={loader} alt="" className="w-12"  /> </>:<span className="px-8 py-1">Log in</span>  }</button>
             </form>
             <div className="text-red-600 font-semibold my-2 text-center">{error}</div>
